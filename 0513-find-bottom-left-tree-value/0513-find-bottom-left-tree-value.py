@@ -7,12 +7,12 @@
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         if not root: return
-        q=collections.deque([[root,0]])
+        stack=[[root,0]]
         ans=[root.val,0]
-        while q:
-            node, dep=q.popleft()
+        while stack:
+            node, dep=stack.pop()
             if  ans[1] < dep:
                 ans=[node.val, dep]
-            if node.left: q.append([node.left, dep+1])    
-            if node.right: q.append([node.right, dep+1])
+            if node.right: stack.append([node.right, dep+1])
+            if node.left: stack.append([node.left, dep+1])    
         return ans[0]
