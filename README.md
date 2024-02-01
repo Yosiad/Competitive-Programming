@@ -1,2 +1,2 @@
 # Leetcode
-This repo holds my leetcode solutions. all solutions are in pyhton programming language.
+This repo holds my leetcode solutions. most solutions are in pyhton programming language. where some are Javascipt
