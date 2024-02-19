@@ -3,6 +3,7 @@ class Solution:
         n = len(parents)
         tree = defaultdict(set)
         root = None
+        
         for i in range(n):
             if parents[i] != -1:
                 tree[parents[i]].add(i)
